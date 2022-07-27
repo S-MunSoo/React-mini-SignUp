@@ -19,7 +19,7 @@
 
 dialog {
   top: 50%;
-  transform: translateY(-100%);
+  transform: translate(700px, -100%);
   width: 512px;
   z-index: 99;
   padding: 0;

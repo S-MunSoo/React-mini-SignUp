@@ -3,7 +3,7 @@ import Form from "./component/Form";
 import Footer from "./component/Footer";
 import FontControlBox from "./component/FontControlBox";
 import Modal from "./component/Modal";
-import { useState } from "react";
+import { useState, useRef } from "react";
 // 1.contextAPI는  createContext를 불러와 사용한다.
 import { createContext } from "react";
 
@@ -32,15 +32,18 @@ export const FormContext = createContext({
 
 function App() {
   const [formData, setFormData] = useState(initialFormData);
+  // ref를 이용한 모달 react 에서는 ref를 프롭으로 전달하기 위해 React.forwardRef 감싸 줘야지 두번쨰 인자로 받을 수 잇따.
+  const modalRef = useRef(null); //useRef를 쓰는 것은 돔을 직접적으로 제어하기 위해서 이다. modalRef === getElementById
+
   return (
     <>
       <FormContext.Provider value={{ formData, setFormData }}>
         <section className="form-wrapper">
-          <Form />
+          <Form modalRef={modalRef} />
           <Footer />
         </section>
         <FontControlBox />
-        <Modal />
+        <Modal ref={modalRef} />
       </FormContext.Provider>
     </>
   );
