@@ -1,5 +1,8 @@
 ## 🐻 React 프론트엔드 미니 사전과제 프로젝트 #1 회원가입 폼
 
+
+https://user-images.githubusercontent.com/102017296/181428337-160c83de-ccc7-424d-b7c5-600e81f35626.mov
+
 ### 요구사항 및 학습 목표 ✅
 
 1. autofocus : 페이지가 로드 된 시점에 ID 입력 창에 Focus가 되어 있어야 한다
